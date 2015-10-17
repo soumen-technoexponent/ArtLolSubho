@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rltv_listark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <FrameLayout
+            android:id="@+id/myContainer"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:visibility="visible" >
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/img_art"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/ic_launcher" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/artname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/myContainer"
+            android:text="Great SandWork" />
+
+        <TextView
+            android:id="@+id/artaddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/artname"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/myContainer"
+            android:text="Tonto national Forest,Miami" />
+
+        <TextView
+            android:id="@+id/text_viewdetails"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/artaddress"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#977714"
+            android:gravity="center"
+            android:text="View Details"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+
+</RelativeLayout>

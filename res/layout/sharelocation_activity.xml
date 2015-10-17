@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/header_sharelocation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" >
+
+        <LinearLayout
+            android:id="@+id/llt_searchlocationlinear"
+            android:layout_width="80dp"
+            android:layout_height="60dp" >
+
+            <TextView
+                android:id="@+id/text_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Back"
+                android:textAllCaps="true" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_sharelocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingLeft="10dp"
+            android:text="share a location"
+            android:textAllCaps="true" />
+
+        <ImageView
+            android:id="@+id/headersharelocationimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_launcher" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/header_sharelocation"
+        android:background="#000000" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
+
+            <RelativeLayout
+                android:id="@+id/rltv_share_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" >
+
+                <TextView
+                    android:id="@+id/requiredfield"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"
+                    android:text="Required Fields"
+                    android:textAllCaps="false"
+                    android:textColor="#558822" />
+
+                <TextView
+                    android:id="@+id/text_uploadphoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/requiredfield"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="40dp"
+                    android:text="Upload Photos"
+                    android:textColor="#558822" />
+
+                <TextView
+                    android:id="@+id/text_youmayuploadphoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                  
+                    android:layout_below="@+id/requiredfield"
+                    android:layout_toRightOf="@+id/text_uploadphoto"
+                    android:text="(you may upload more than one) :"
+                    android:textColor="#558822" />
+
+                <TextView
+                    android:id="@+id/text_upload"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/text_uploadphoto"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#977714"
+                    android:gravity="center"
+                    android:text="Upload"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/text_captureupload"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/text_uploadphoto"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/text_upload"
+                    android:background="#977714"
+                    android:gravity="center"
+                    android:text="Capture  Upload"
+                    android:textColor="#ffffff" />
+
+                <EditText
+                    android:id="@+id/edit_title"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/text_captureupload"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textview_border"
+                    android:hint="Title" />
+
+                <EditText
+                    android:id="@+id/edit_artworkcreatedby"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/edit_title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textview_border"
+                    android:hint="Artwork created by" />
+
+                <EditText
+                    android:id="@+id/edit_artworkdescription"
+                    android:layout_width="250dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/edit_artworkcreatedby"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textview_border"
+                    android:hint="Description" />
+
+                <CheckBox
+                    android:id="@+id/check_currentlocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_artworkdescription"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:id="@+id/usecurrentlocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_artworkdescription"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/check_currentlocation"
+                    android:text="Use Current Location" />
+
+                <EditText
+                    android:id="@+id/edit_artworklocation"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/check_currentlocation"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textview_border"
+                    android:hint="Location" />
+
+                
+                     <fragment
+                        android:id="@+id/artnmapsearchlocation"
+                        android:layout_width="250dp"
+                        android:layout_height="150dp"
+                        android:layout_below="@+id/edit_artworklocation"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="5dp"
+                        class="com.google.android.gms.maps.MapFragment" />
+               
+
+                <EditText
+                    android:id="@+id/edit_choosecategory"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/artnmapsearchlocation"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textview_border"
+                    android:drawableRight="@drawable/dropdownarrow"
+                    android:hint="Choose A Category" />
+
+                <TextView
+                    android:id="@+id/text_post"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/edit_choosecategory"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="#559988"
+                    android:gravity="center"
+                    android:text="Post"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

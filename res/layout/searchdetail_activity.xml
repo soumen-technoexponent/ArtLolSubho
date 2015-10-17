@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rltv_searchdetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/rltv_headersearchdetails"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#997744" >
+
+            <EditText
+                android:id="@+id/edt_search_searchdetails"
+                android:layout_width="220dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp" />
+
+            <ImageView
+                android:id="@+id/img_headersearchdetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_launcher" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rltvbottomsearchlist"
+            android:layout_below="@+id/rltv_headersearchdetails" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rltv_artstone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textindianstoneart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/textindianstoneartcount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:text="1 of 10"
+                        android:textColor="#000000" />
+
+                    <ImageView
+                        android:id="@+id/img_search_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        
+                        android:layout_below="@+id/textindianstoneart" />
+
+                    <TextView
+                        android:id="@+id/text_postedby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/img_search_details"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="Posted By :"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/text_postedbyname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_search_details"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/text_postedby"
+                        android:gravity="center"
+                        android:text="Arghys Dutta"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/text_favouriteno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/img_search_details"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:text="(5)"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/text_favourite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_search_details"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/text_favouriteno"
+                        android:gravity="center"
+                        android:text="Favourite"
+                        android:textColor="#000000" />
+
+                    <ImageView
+                        android:id="@+id/img_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/text_favourite" />
+
+                    <TextView
+                        android:id="@+id/text_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_postedby"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="Kolkata,West Bengal"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/text_publicart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_address"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Public Art"
+                        android:textColor="#000000" />
+
+                    <View
+                        android:id="@+id/view_publicart"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/text_publicart"
+                        android:layout_marginTop="10dp"
+                        android:background="#000000" />
+
+                    <TextView
+                        android:id="@+id/text_publicartdescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_publicart"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:maxLines="5"
+                        android:text="uhfuhvhrhvrvrkvhruhrrlirjliejijfekqweooeejerijffjiffff"
+                        android:textColor="#000000" />
+
+                 <fragment
+                        android:id="@+id/artnmapsearchlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_below="@+id/text_publicartdescription"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="5dp"
+                        class="com.google.android.gms.maps.MapFragment" />
+
+                    <View
+                        android:id="@+id/view_publicartsearchlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/artnmapsearchlist"
+                        android:layout_marginTop="10dp"
+                        android:background="#000000" />
+
+                    <EditText
+                        android:id="@+id/edit_comments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_publicartsearchlist"
+                        android:hint="Write your Comments....." />
+
+                    <TextView
+                        android:id="@+id/text_post"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/edit_comments"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#977714"
+                        android:gravity="center"
+                        android:text="POST"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+        <RelativeLayout 
+           android:id="@+id/rltvbottomsearchlist"
+           android:layout_width="match_parent"
+           android:layout_height="60dp"
+           android:background="#998866"
+           android:layout_alignParentBottom="true">
+           <ImageView 
+               android:id="@+id/img_homesearchlist"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:layout_alignParentLeft="true"
+               android:background="@drawable/ic_launcher"/>
+           <ImageView 
+               android:id="@+id/img_middlesearchlist"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+              android:layout_centerInParent="true"
+               android:background="@drawable/ic_launcher"/>
+           <ImageView 
+               android:id="@+id/img_rightsearchlist"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:layout_alignParentRight="true"
+               android:background="@drawable/ic_launcher"/>
+       </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

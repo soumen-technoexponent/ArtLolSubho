@@ -1,0 +1,175 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rltv_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/headerColor" >
+
+        <RelativeLayout
+            android:id="@+id/rltv_back"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true" >
+
+            <ImageView
+                android:id="@+id/imvw_back"
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/backbtn" />
+
+            <TextView
+                android:id="@+id/backText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/img_back"
+                android:text="back"
+                android:textAllCaps="true"
+                android:textColor="@color/whiteColor" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/headerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="SELL AN ITEM"
+            android:textAllCaps="true"
+            android:textColor="@color/whiteColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/menuImgTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@color/headerColor"
+            android:gravity="center"
+            android:textColor="@color/whiteColor"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rltv_header"
+        android:layout_centerHorizontal="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/txt_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/postAnItem"
+                android:textColor="@color/blackColor"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txt_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_post"
+                android:gravity="center"
+                android:text="@string/example"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/txt_required_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/txt_example"
+                android:layout_marginRight="50dp"
+                android:gravity="center"
+                android:text="*Required Fields"
+                android:textColor="#e70000" />
+
+            <RelativeLayout
+                android:id="@+id/rltv_upload_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/txt_required_field" >
+
+                <TextView
+                    android:id="@+id/txt_upload_photos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Upload Photos"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txt_youmay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/txt_upload_photos"
+                    android:text="(you may upload more than one)*" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltv_upload_capture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rltv_upload_text" >
+
+                <RelativeLayout
+                    android:id="@+id/rltv_upload"
+                   android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="30dp"
+                    android:background="#5470AF" >
+
+                    <TextView
+                        android:id="@+id/txt_image_upload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true" />
+
+                    <TextView
+                        android:id="@+id/txt_upload"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_toRightOf="@+id/txt_image_upload"
+                        android:text="Upload" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rltv_capture"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@+id/rltv_upload" 
+                    android:background="#26871E">
+
+                    <TextView
+                        android:id="@+id/txt_image_capture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true" />
+
+                    <TextView
+                        android:id="@+id/txt_capture"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_toRightOf="@+id/txt_image_capture"
+                        android:text="@string/Capture_Upload" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

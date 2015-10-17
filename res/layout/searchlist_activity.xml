@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+   <RelativeLayout 
+       android:id="@+id/rltv_searchlist"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       >
+
+       <RelativeLayout
+           android:id="@+id/rltv_headersearchlist"
+           android:layout_width="match_parent"
+           android:layout_height="60dp" 
+           android:background="#997744">
+           <EditText 
+               android:id="@+id/edt_search_searchlist"
+               android:layout_width="220dp"
+               android:layout_height="40dp"
+               android:layout_marginLeft="10dp"
+              android:layout_alignParentLeft="true"
+              android:layout_centerVertical="true"
+               />
+           <ImageView
+               android:id="@+id/img_header" 
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:background="@drawable/ic_launcher"
+               android:layout_alignParentRight="true"/>
+       </RelativeLayout>
+
+       <ScrollView
+           android:id="@+id/scrollView1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" 
+           android:layout_above="@+id/rltvbottomart"
+           android:layout_below="@+id/rltv_headersearchlist">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical" >
+          
+
+       <RelativeLayout
+           android:id="@+id/rltv_showingartwork"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" 
+          
+           android:layout_below="@+id/rltv_headersearchlist">
+
+           <TextView 
+               android:id="@+id/text_showingtext"
+               android:layout_width="match_parent"
+               android:layout_height="60dp"
+               android:paddingLeft="10dp"
+               android:textColor="#000000"
+               android:textSize="15sp"
+               android:text="Showing 4 artworks"
+               android:gravity="center_vertical"/>
+
+           <View 
+               android:id="@+id/viewshowingtext"
+               android:layout_width="match_parent"
+               android:layout_height="0.5dp"
+               android:background="#000000"
+               android:layout_below="@+id/text_showingtext"/>
+
+             <fragment
+                        android:id="@+id/artnmap"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_below="@+id/viewshowingtext"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="5dp"
+                        class="com.google.android.gms.maps.MapFragment" /> 
+
+            <ListView
+                android:id="@+id/listView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#776644"
+                android:layout_below="@+id/artnmap" 
+               >
+            </ListView>
+            
+
+       </RelativeLayout>
+        </LinearLayout>
+       </ScrollView>
+       <RelativeLayout 
+           android:id="@+id/rltvbottomart"
+           android:layout_width="match_parent"
+           android:layout_height="60dp"
+           android:background="#998866"
+           android:layout_alignParentBottom="true">
+           <ImageView 
+               android:id="@+id/img_home"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:layout_alignParentLeft="true"
+               android:background="@drawable/ic_launcher"/>
+           <ImageView 
+               android:id="@+id/img_middle"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+              android:layout_centerInParent="true"
+               android:background="@drawable/ic_launcher"/>
+           <ImageView 
+               android:id="@+id/img_right"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:layout_alignParentRight="true"
+               android:background="@drawable/ic_launcher"/>
+       </RelativeLayout>
+   </RelativeLayout>
+
+</RelativeLayout>

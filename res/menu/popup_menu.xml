@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+ 	
+     <item
+        android:id="@+id/myaccountmenu"
+        android:showAsAction="ifRoom|withText"
+        android:title="My account"
+        android:visible="true"/>
+   
+   
+    <item
+        android:id="@+id/sellanitemmenu"
+        android:showAsAction="ifRoom|withText"
+        android:title="Sell an item"
+        android:visible="true"/>
+    
+    
+    <item
+        android:id="@+id/sharelocationmenu"
+        android:showAsAction="ifRoom|withText"
+        android:title="Share location"
+        android:visible="true"/>
+    
+    <item
+        android:id="@+id/signoutmenu"
+        android:showAsAction="ifRoom|withText"
+        android:title="Sign out"
+        android:visible="true"/>
+</menu>
